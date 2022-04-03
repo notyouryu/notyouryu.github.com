@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Hello World2 |  Notyouryu&#39;s Blog</title>
+      <title>搭建此博客的心得体会 |  Notyouryu&#39;s Blog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -66,7 +66,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Hello World2
+  搭建此博客的心得体会
 </h1>
  
 
@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">75</span>
+            <span class="post-count">939</span>
         </span>
     </span>
 
@@ -91,7 +91,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">3 min</span>
         </span>
     </span>
 </div>
@@ -106,11 +106,35 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+  <h2 id="一、框架"><a href="#一、框架" class="headerlink" title="一、框架"></a>一、框架</h2><pre><code>使用的是 [Hexo](https://hexo.io/)框架。Hexo是一个快速、简洁且高效的博客框架。
+特点：
+    •速度快
+    •可以一键部署
+    •插件和可拓展性
+    •支持MarkDown
+</code></pre>
+<h2 id="二、安装配件并设置环境变量"><a href="#二、安装配件并设置环境变量" class="headerlink" title="二、安装配件并设置环境变量"></a>二、安装配件并设置环境变量</h2><pre><code>依次安装[git](https://git-scm.com/)、[nodejs](http://nodejs.cn/),随后看到绑定域名就ok。
+设置环境变量可以参考[我的CSDN](https://blog.csdn.net/apple_54125764/article/details/123919700?spm=1001.2014.3001.5501)。
+</code></pre>
+<h2 id="三、购买域名"><a href="#三、购买域名" class="headerlink" title="三、购买域名"></a>三、购买域名</h2><pre><code>域名购买起来其实挺简单的，我选择的是外网的namesilo。在这里踩了坑，不建议选择外网！外网便宜但是最后双向绑定到Hithub的时候会巨慢，内网挺贵、需要公安备案、但是相应速度很快。这里需要注意有的是首年便宜后续特贵，一定要看清楚了。
+</code></pre>
+<h2 id="四、域名与Hithub绑定"><a href="#四、域名与Hithub绑定" class="headerlink" title="四、域名与Hithub绑定"></a>四、域名与Hithub绑定</h2><pre><code>在这里踩了巨量的坑，跟着很多文章走下来都没有结果。随后自己摸爬滚打＋求助各路神仙，慢慢绑定成功了。
+</code></pre>
+<p> 1、首先进入<a target="_blank" rel="noopener" href="https://github.com/">Hitub</a>界面，注册账号。点击右上角的+，创建一个New repository，选择 public。<br>    github项目创建完成，点击     “Continue to layouts”，点击发布个人网站，我们的初始网站就建好了，不过这只是一个github.io结尾的。<br> 2、安装Hexo，具体步骤如下：<br>    打开git bash 输入以下命令：<br>    •npm install hexo-cli -g<br>    •hexo init blog<br>    •cd blog<br>    •npm install<br>    •hexo server<br>    随后会出来一个<a target="_blank" rel="noopener" href="http://localhost:4000/">本地连接</a>,复制到浏览器里我们的本地网站就部署好了，这里有很多<a target="_blank" rel="noopener" href="https://hexo.io/themes/">theme</a>，但是大众化的太多了，我选择的是简约清爽的ayer主题。也可以自己写，当然前提是会css。js的话。<br>3、部署代码到Hithub page<br>   •首先要生产SSH密钥，这里还是参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/apple_54125764/article/details/123919700?spm=1001.2014.3001.5501">CSDN</a>.<br>   •接下来就是将本地的静态博客部署到gitHub上，要把本地的静态博客同步到 Github，我们还需要先安装两个跟部署相关的 hexo 插件。<br>     可以实现如下命令：<br>                     • npm install hexo -server –save<br>                     • npm install hexo-deployer-git –save<br>   •编辑全局 hexo 的配置文件：_config.yml.编辑全局配置后我们需要重新部署：<br>                     • hexo clean       #先清除掉已经生成的旧文件<br>                     • hexo generate    #再生成一次静态文件<br>                     • hexo server      #进行本地预览，本地预览没问题的情况下，按下ctrl+c取消预览<br>                     • hexo deploy      #开始部署到Hithub<br>   •访问服务器地址来检查是否部署成功（服务器地址是你的hithub建立的项目地址）。</p>
+<pre><code> 小结：以后每次发布新文章都要按照步骤来：
+                                    •   hexo clean
+                                        hexo generate
+                                         hexo deploy
+</code></pre>
+<p>4、github pages绑定域名<br>   •<a href="ttps://blog.csdn.net/m0_37812513/article/details/78775629?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164899466416780271586113%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=164899466416780271586113&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-78775629.142^v5^pc_search_quality_down,157^v4^control&utm_term=域名解析&spm=1018.2226.3001.4187">域名解析额</a>&amp;<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23547831/article/details/50966172?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164899473916782246478080%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=164899473916782246478080&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-50966172.142%5Ev5%5Epc_search_quality_down,157%5Ev4%5Econtrol&utm_term=github%E8%A7%A3%E6%9E%90&spm=1018.2226.3001.4187">Github解析</a>,这里就不过多叙述了，多看看文章慢慢踩坑。<br>     踩过的坑：域名解析是需要一个A类，一个CNAME的。A类倒不重要，CANME是最为关键的，TTL设置为3600，也就是1 hour.</p>
+<h3 id="5、主题选择"><a href="#5、主题选择" class="headerlink" title="5、主题选择"></a>5、主题选择</h3><pre><code>  我选择了Ayer，看中了它的简约风。修改.yml文件，替换背景image图片，替换logo。图片可以用jpg也可以用npg文件。这里注意：背景图片最好选用偏深色系的image，不然后期博客title会看不见，hexo没有给相关调色代码，所以title目前只能是白色。这里要十分感谢几位朋友帮我找logo，背景图，帮我调试的（zcn，cy，hx，ksy）。zcn的微博在本页最下方哦！
+</code></pre>
+<h3 id="6、常见问题"><a href="#6、常见问题" class="headerlink" title="6、常见问题"></a>6、常见问题</h3><pre><code>• hexo g 失败
+ 解决方法:title: hexo 注意冒号后面要加空格
+• hexo d 失败
+ 解决方法：
+</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
@@ -227,7 +251,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2015-2022
+        2021-2022
         <i class="ri-heart-fill heart_icon"></i> ChengYu Wang
       </li>
     </ul>
@@ -250,9 +274,18 @@
     </ul>
     <ul>
       
+        <li>
+          <a href="https://hexo.io/zh-cn/" target="_black" rel="nofollow">Powered by hexo</a>
+        </li>
+        
     </ul>
     <ul>
       
+      <li>
+          <img src=""></img>
+          <a href="https://weibo.com/u/3198902777" target="_black" rel="nofollow">Logo by Chuning Chou</a>
+      </li>
+        
     </ul>
     <ul>
       <li>
@@ -287,6 +320,22 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://space.bilibili.com/373188580?spm_id_from=333.1007.0.0">bilibili</a>
     </li>
     
   </ul>
@@ -483,7 +532,9 @@
 <script src="/js/busuanzi-2.3.pure.min.js"></script>
  
 <!-- ClickLove -->
-
+ 
+<script src="/js/clickLove.js"></script>
+ 
 <!-- ClickBoom1 -->
 
 <!-- ClickBoom2 -->
@@ -547,7 +598,9 @@
 </script>
  
 <!-- CanvasBackground -->
-
+ 
+<script src="/js/dz.js"></script>
+ 
 <script>
   if (window.mermaid) {
     mermaid.initialize({ theme: "forest" });
@@ -555,6 +608,23 @@
 </script>
 
 
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
     
     
 
