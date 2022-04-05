@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>title |  notyouryuのblog</title>
+      <title>关于Git、Nodejs的安装及环境适配 |  notyouryuのblog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -66,7 +66,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  title
+  关于Git、Nodejs的安装及环境适配
 </h1>
  
 
@@ -86,7 +86,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">0</span>
+            <span class="post-count">666</span>
         </span>
     </span>
 
@@ -95,20 +95,39 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-   
+  <h2 id="一、GIT的下载。"><a href="#一、GIT的下载。" class="headerlink" title="一、GIT的下载。"></a>一、GIT的下载。</h2><p>•百度搜索<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">git</a>官网。<br>我下载的是windows版本的，如果是mac或者linux官网都有下载链接的。一般推荐下载最新版本的也就是64-bit版本的。如果ruby版本跟不上的话还是推荐下载32bit。</p>
+<h3 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h3><p>双击下载好的set up程序<br><img src="/images/picture2.png" alt="P1.1"><br>一直点击next，默认勾选就好，如果后期想要方便打开git bash的话就勾选第一个添加到桌面图标就成。   ps：最后两栏是勾选后会实时更新提示之类的，推荐不勾选。后续一直点击NEXT就ok</p>
+<span id="more"></span>
+
+<h3 id="三、检查是否安装完成"><a href="#三、检查是否安装完成" class="headerlink" title="三、检查是否安装完成"></a>三、检查是否安装完成</h3><p>按下WIN+R，在弹出的窗口中输入cmd，输入where git（可以获取git的安装路径）&amp;git，回车。出现以下界面那么恭喜你！安装成功噜！<br><img src="/images/picture3.png" alt="P1.2"></p>
+<h3 id="四、开发环境配置"><a href="#四、开发环境配置" class="headerlink" title="四、开发环境配置"></a>四、开发环境配置</h3><p>• 注册<a target="_blank" rel="noopener" href="https://github.com/">Github</a>账号.<br>注册成功后后，点击git bash（找不到的小朋友去刚刚安装好的目录里面去找到它），下面就开始用账号进行环境配置。<br>• 配置用户名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$git</span> config --global user.name<span class="string">&quot;username&quot;</span>      //  <span class="string">&quot;username&quot;</span>是注册时候的账户名</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$git</span> config --global user.email“username@email.com<span class="string">&quot;  //&quot;</span>username@email.com <span class="string">&quot;是注册用的邮箱</span></span><br></pre></td></tr></table></figure>
+<p>•检查时候配置成功<br>执行上述命令后输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --list 检查是否配置成功</span><br></pre></td></tr></table></figure>
+
+<h3 id="五、生成SSH公钥"><a href="#五、生成SSH公钥" class="headerlink" title="五、生成SSH公钥"></a>五、生成SSH公钥</h3><p>在刚刚的git bash 框内输入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ssh</span> -keygen -t rsa </span><br></pre></td></tr></table></figure>
+<p>回车回车再回车结果如下：<br><img src="/images/picture4.png" alt="P1.3"><br>得到了公钥的 randomart image 形式。随后去git bash 中显示的文件路径中找到生产的ssh文件 .<br>原则上是只会出现这两个滴！但是文件密钥一般有三个（后面解释）<br>用记事本打开id_rsa文件然后copy下来去到 刚刚的<a target="_blank" rel="noopener" href="https://github.com/">Github</a>官网找到setting设置。<br>点击左边的SSH  keys ，继续点击New SSH key。把刚刚copy的id_rsa文件粘贴到第二栏，title随便填就好了。随后会收到邮件，这步完成之后就只差最后一步了。<br>•测试配置是否成功<br>进入git bash 命令框输入命令：</p>
+<p>$ ssh -T </p>
+<p>输入yes后回车<br>最后弹出successful就说明成功了。</p>
+<p>常见问题<br>•关于安装路径问题：<br>俺下载了六七次set up 界面给我的显示是从未出现过路径的browse选项，这让我很头秃！<br>因为后续进行 git bash操作的时候会使用到 git 的安装路径！所以我选择卸载后重装，发现还是会选择默认的安装路径进行安装。。。没有办法.（有大佬指教吗）</p>
+ 
       <!-- reward -->
       
       <div id="reword-out">
