@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> notyouryuのblog</title>
+      <title>FreeRTOS学习笔记 |  notyouryuのblog</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,87 +53,8 @@
     
       
     <main class="content on">
-      
-<section class="cover">
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover24.png" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">notyouryuのblog</a></h1>
-      <div id="subtitle-box">
-        
-          <span id="subtitle">&#39;樱花班的回忆 🌸&#39;</span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-
-<!-- Subtitle -->
-
-<div id="main">
-  <section class="outer">
-  
-  
-  
-
-<div class="notice" style="margin-top:50px">
-    <i class="ri-heart-fill"></i>
-    <div class="notice-content" id="broad"></div>
-</div>
-<script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("broad").innerHTML = data.hitokoto;
-        })
-        .catch(console.error)
-</script>
-
-<style>
-    .notice {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-    }
-
-    .notice i {
-        float: left;
-        color: #999;
-        font-size: 16px;
-        padding-right: 10px;
-        vertical-align: middle;
-        margin-top: -2px;
-    }
-
-    .notice-content {
-        display: initial;
-        vertical-align: middle;
-    }
-</style>
-  
-  <article class="articles">
-    
-    
-    
-    
-    <article
+      <section class="outer">
+  <article
   id="post-title-1"
   class="article article-type-post"
   itemscope
@@ -144,10 +65,9 @@
     
     <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/05/16/title-1/"
-    >FreeRTOS学习笔记</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  FreeRTOS学习笔记
+</h1>
  
 
       
@@ -160,9 +80,34 @@
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">学习心得</a>
   </div>
-   
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">7 min</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
       
+    <div class="tocbot"></div>
+
+
+
+
+  
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="FreeRTOS简介"><a href="#FreeRTOS简介" class="headerlink" title="FreeRTOS简介"></a>FreeRTOS简介</h1><h2 id="1-什么是FreeRTOS"><a href="#1-什么是FreeRTOS" class="headerlink" title="1.什么是FreeRTOS"></a>1.什么是FreeRTOS</h2><p><strong>FreeRTOS</strong>是一个迷你的实时操作系统内核。作为一个轻量级的操作系统.<br>功能包括：</p>
@@ -237,570 +182,182 @@
  
       <!-- reward -->
       
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
     </div>
     
 
     <!-- copyright -->
     
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
     <footer class="article-footer">
        
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/05/16/title-1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/" rel="tag">嵌入式系统</a></li></ul>
 
     </footer>
   </div>
 
-    
- 
-    
-  
-</article>
-
-    
-    <article
-  id="post-title"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/15/title/"
-    >沟通技巧</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/15/title/" class="article-date">
-  <time datetime="2022-04-14T16:39:47.991Z" itemprop="datePublished">2022-04-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
-  </div>
    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、先讲结论"><a href="#一、先讲结论" class="headerlink" title="一、先讲结论"></a>一、先讲结论</h2><h1 id="使用-PREP-模式"><a href="#使用-PREP-模式" class="headerlink" title="使用 PREP 模式"></a>使用 PREP 模式</h1><ol>
-<li>Point 结论</li>
-<li>Reason 依据</li>
-<li>Example 具体事例</li>
-<li>Point 重申结论后结束</li>
-</ol>
-<p>进行演讲、交流、汇报、会议都需要采用这种方法。沟通时不必立即做出回答，可以思考几分钟。</p> 
-      <a class="article-more-link" href="/2022/04/15/title/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
+  <nav class="article-nav">
     
-
-    <!-- copyright -->
     
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/communicate/" rel="tag">communicate</a></li></ul>
-
-    </footer>
-  </div>
-
+      <a href="/2022/04/15/title/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">沟通技巧</div>
+      </a>
     
- 
-    
-  
-</article>
-
-    
-    <article
-  id="post-note"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/14/note/"
-    >2022/4/15 0:20</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/14/note/" class="article-date">
-  <time datetime="2022-04-14T15:58:50.796Z" itemprop="datePublished">2022-04-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/essay/">essay</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="深夜开e"><a href="#深夜开e" class="headerlink" title="深夜开e"></a>深夜开e</h2><p><em><strong>今晚坐在电脑面前，想着该不该开开电脑更新点什么，但是最近很忙确实也没有什么东西可以记录，想想还是写点日记记录一下。</strong></em></p> 
-      <a class="article-more-link" href="/2022/04/14/note/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/note/" rel="tag">note</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-  
-</article>
-
-    
-    <article
-  id="post-eats2"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/14/eats2/"
-    >吃点好的</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/14/eats2/" class="article-date">
-  <time datetime="2022-04-14T15:33:47.941Z" itemprop="datePublished">2022-04-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="Steak-House"><a href="#Steak-House" class="headerlink" title="Steak House"></a>Steak House</h2><h1 id="4-14"><a href="#4-14" class="headerlink" title="4/14"></a>4/14</h1> 
-      <a class="article-more-link" href="/2022/04/14/eats2/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%80%E7%8C%AA%E9%A5%B2%E6%96%99/" rel="tag">杀猪饲料</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-  
-</article>
-
-    
-    <article
-  id="post-eats"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/13/eats/"
-    >人间干饭实录</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/13/eats/" class="article-date">
-  <time datetime="2022-04-12T18:57:31.753Z" itemprop="datePublished">2022-04-13</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="4-13-晚餐"><a href="#4-13-晚餐" class="headerlink" title="4/13 晚餐"></a>4/13 晚餐</h2><p><img src="/images/c1.png"></p>
-<p><em><strong>晚上和朋友来银泰恰饭，上了这么一道菜。看这分量，看这价格。。。。我的评价是下次不一定。性价比不高，口感偏甜。应该是猪肉吧，不腻，吃起来很烂很下饭，酱汁包在肉的表面，很入味好吧。不但有红烧肉的鲜香味，还有荔枝肉的酸甜口。喜欢吃甜的朋友一定得来试一试！</strong></em><br>买的了吃亏！买的了上当！</p> 
-      <a class="article-more-link" href="/2022/04/13/eats/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%80%E7%8C%AA%E9%A5%B2%E6%96%99/" rel="tag">杀猪饲料</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-  
-</article>
-
-    
-    <article
-  id="post-markdown"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/13/markdown/"
-    >markdown从入门到入坑</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/13/markdown/" class="article-date">
-  <time datetime="2022-04-12T18:14:36.632Z" itemprop="datePublished">2022-04-13</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80/">开发语言</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><img src="/images/come2.png"></p>
-<h2 id="序言："><a href="#序言：" class="headerlink" title="序言："></a>序言：</h2><p><em><strong>你说的那个markdown，它厉害吗？</strong></em><br>它不是厉不厉害的问题，它真的是那种……那种用起来很舒服的那种。它的语法特别简单，功能超级多，支持H5标签，很强大.</p>
-<h2 id="什么是markdown？"><a href="#什么是markdown？" class="headerlink" title="什么是markdown？"></a><em><strong>什么是markdown？</strong></em></h2><p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p> 
-      <a class="article-more-link" href="/2022/04/13/markdown/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-  
-</article>
-
-    
-    <article
-  id="post-sakura"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/07/sakura/"
-    >关于sakura动态特效</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/07/sakura/" class="article-date">
-  <time datetime="2022-04-07T15:53:33.271Z" itemprop="datePublished">2022-04-07</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/">技术总结</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>var stop, staticx;<br>var img = new Image();<br>img.src = “data:image/png;base64;<br>function Sakura(x, y, s, r, fn) {<br> 
-      <a class="article-more-link" href="/2022/04/07/sakura/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%89%B9%E6%95%88/" rel="tag">特效</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-  
-</article>
-
-    
-    <article
-  id="post-git"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/05/git/"
-    >关于Git、Nodejs的安装及环境适配</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/05/git/" class="article-date">
-  <time datetime="2022-04-05T15:50:06.957Z" itemprop="datePublished">2022-04-05</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%96%B9%E9%9D%A2/">软件方面</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、GIT的下载。"><a href="#一、GIT的下载。" class="headerlink" title="一、GIT的下载。"></a>一、GIT的下载。</h2><p>•我下载的是windows版本的，如果是mac或者linux官网都有下载链接的。一般推荐下载最新版本的也就是64-bit版本的。<br>如果ruby版本跟不上的话还是推荐下载32bit。</p> 
-      <a class="article-more-link" href="/2022/04/05/git/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git-nodejs/" rel="tag">git&nodejs</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-  
-</article>
-
-    
-    <article
-  id="post-Communications"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/05/Communications/"
-    >Principies of Communications</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/05/Communications/" class="article-date">
-  <time datetime="2022-04-05T12:21:59.265Z" itemprop="datePublished">2022-04-05</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86/">通信原理</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>从今天开始，准备对通信原理进行一次深度学习。——呜，实际上就是从头学一遍，学第一遍的时候总是感觉云里雾里的，hen烦。<br>从现在开始慢慢更新吧。<br><img src="/images/picture1.jpg" alt="派派牌翻白眼"></p>
-<h2 id="1、写出香农公式，并说明信道容量C与B，S，n0之间的关系。"><a href="#1、写出香农公式，并说明信道容量C与B，S，n0之间的关系。" class="headerlink" title="1、写出香农公式，并说明信道容量C与B，S，n0之间的关系。"></a>1、写出香农公式，并说明信道容量C与B，S，n0之间的关系。</h2><p>•香农公式：&emsp; &emsp;Ct=Blog2(1+SN)=Blog2(1+Sn0B）单位：b/s 说明：S为信号平均功率（W）、N为噪声功率、N为带宽（Hz）、n0表示噪声单边功率谱密度（W/Hz）<br>•关系：<br>&emsp;&emsp;&emsp;&emsp;提高信噪比S/N，可增大信道容量C<br>&emsp;&emsp;&emsp;&emsp;C随着B的适当增大而增大，但当B→∞时，C→1.44Sn0<br>•通过B与S/N的互换，可以维持一定的C</p> 
-      <a class="article-more-link" href="/2022/04/05/Communications/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E5%AD%90%E4%BF%A1%E6%81%AF/" rel="tag">电子信息</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-  
-</article>
-
-    
-    <article
-  id="post-Opioion"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2022/04/03/Opioion/"
-    >搭建此博客的心得体会</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2022/04/03/Opioion/" class="article-date">
-  <time datetime="2022-04-03T08:52:27.997Z" itemprop="datePublished">2022-04-03</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/">技术总结</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="一、框架"><a href="#一、框架" class="headerlink" title="一、框架"></a>一、框架</h2><p>使用的是 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>框架。Hexo是一个快速、简洁且高效的博客框架。<br>特点：<br>•速度快<br>•可以一键部署<br>•插件和可拓展性<br>•支持MarkDown</p>
-<h2 id="二、安装配件并设置环境变量"><a href="#二、安装配件并设置环境变量" class="headerlink" title="二、安装配件并设置环境变量"></a>二、安装配件并设置环境变量</h2><p>依次安装<a target="_blank" rel="noopener" href="https://git-scm.com/">git</a>、<a target="_blank" rel="noopener" href="http://nodejs.cn/">nodejs</a>。<br>设置环境变量可以参考我的<a target="_blank" rel="noopener" href="https://blog.csdn.net/apple_54125764/article/details/123919700?spm=1001.2014.3001.5501">CSDN</a>。</p> 
-      <a class="article-more-link" href="/2022/04/03/Opioion/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-Hithub/" rel="tag">hexo&Hithub</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-  
-</article>
-
-    
-  </article>
-  
-
-  
-  <nav class="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
-  
-</section>
-</div>
 
+   
+ 
+   
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+
+
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+
+
+<script src="https://cdn.staticfile.org/blueimp-md5/2.19.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
+   
+<!-- minivaline评论 -->
+<div id="mvcomments-box">
+  <div id="mvcomments"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/minivaline@6"></script>
+<script>
+  new MiniValine(Object.assign({"enable":true,"serverURL":"https://minivaline.your-domain.com"}, {
+    el: '#mvcomments',
+  }));
+  const infoEle = document.querySelector('#mvcomments .info');
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #mvcomments-box {
+    padding: 5px 30px;
+  }
+  @media screen and (max-width: 800px) {
+    #mvcomments-box {
+      padding: 5px 0px;
+    }
+  }
+  :root .darkmode {
+    --ohhho-color-p: #bbb;
+    --ohhho-color-text: #fff;
+    --ohhho-color-card: #252d38;
+    --ohhho-color-block: rgba(68, 68, 68, 0.65);
+    --ohhho-expand-before-background: linear-gradient(
+      180deg,
+      rgba(246, 246, 246, 0),
+      rgba(0, 0, 0, 0.9)
+    );
+    --ohhho-expand-after-background: rgba(0, 0, 0, 0.9);
+  }
+  .darkmode .ohhho pre {
+    background: #888;
+    border: 1px solid var(--ohhho-color-block);
+  }
+  .darkmode .ohhho .vlist .vcard .vcomment-body .vhead {
+    filter: brightness(85%);
+  }
+</style>
+
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
       <footer class="footer">
   
   <div class="outer">
@@ -964,6 +521,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
