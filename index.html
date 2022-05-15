@@ -165,27 +165,17 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="FreeRTOS简介"><a href="#FreeRTOS简介" class="headerlink" title="FreeRTOS简介"></a>FreeRTOS简介</h1><h2 id="1-什么是FreeRTOS"><a href="#1-什么是FreeRTOS" class="headerlink" title="1.什么是FreeRTOS"></a>1.什么是FreeRTOS</h2><p><strong>FreeRTOS</strong>是一个迷你的实时操作系统内核。作为一个轻量级的操作系统.<br>功能包括：</p>
-<ul>
-<li>任务管理</li>
-<li>时间管理</li>
-<li>信号量</li>
-<li>消息队列</li>
-<li>内存管理</li>
-<li>记录功能</li>
-<li>软件定时器</li>
-<li>协程<blockquote>
-<p>可基本满足较小系统的需要。任务调度机制是嵌入式实时操作系统的一个重要概念，也是其核心技术。对于可剥夺型内核，优先级高的任务一旦就绪就能剥夺优先级较低任务的CPU使用权，提高了系统的实时响应能力。不同于<strong>μC/OS-II</strong>，FreeRTOS对系统任务的数量没有限制，既支持优先级调度算法也支持轮换调度算法，因此FreeRTOS采用双向链表而不是采用查任务就绪表的方法来进行任务调度。</p>
+  <h1 id="FreeRTOS简介"><a href="#FreeRTOS简介" class="headerlink" title="FreeRTOS简介"></a>FreeRTOS简介</h1><h3 id="1-什么是FreeRTOS"><a href="#1-什么是FreeRTOS" class="headerlink" title="1.什么是FreeRTOS"></a>1.什么是FreeRTOS</h3><blockquote>
+<p><strong>FreeRTOS</strong>是一个迷你的实时操作系统内核。作为一个轻量级的操作系统.可基本满足较小系统的需要。任务调度机制是嵌入式实时操作系统的一个重要概念，也是其核心技术。对于可剥夺型内核，优先级高的任务一旦就绪就能剥夺优先级较低任务的CPU使用权，提高了系统的实时响应能力。不同于<strong>μC/OS-II</strong>，FreeRTOS对系统任务的数量没有限制，既支持优先级调度算法也支持轮换调度算法，因此FreeRTOS采用双向链表而不是采用查任务就绪表的方法来进行任务调度。</p>
 </blockquote>
-</li>
-</ul>
 <ol>
 <li>Free 即免费的，RTOS 全称是 <strong>Real Time Operating System</strong>，中文就是实时操作系统。注意，RTOS 不是指某一个确定的系统，而是指一类系统。比如 uC/OS，FreeRTOS，RTX，RT-Thread 等这些都是 RTOS 类操作系统。</li>
 <li>操作系统允许多个任务同时运行，这个叫做多任务。实际上，一个处理器核心在某一时刻只能运行一个任务。操作系统中任务调度器的责任就是决定在某一时刻究竟运行哪个任务。任务调度在各个任务之间的切换非常快，就给人们造成了同一时刻有多个任务同时运行的错觉。</li>
 <li>某些操作系统给每个任务分配同样的运行时间，时间到了就轮到下一个任务，比如Unix 操作系统。 FreeRTOS 操作系统则是由用户给每个任务分配一个任务优先级，任务调度器就可以根据此优先级来决定下一刻应该运行哪个任务。</li>
-<li>FreeRTOS 是 RTOS 系统的一种，FreeRTOS 十分的小巧，可以在资源有限的微控制器中运行，当然，FreeRTOS 不仅局限于在微控制器中使用。但从文件数量上来看 FreeRTOS 要比uC/OSII 和 uC/OSIII 小的多。<h2 id="2-为什么选择-FreeRTOS"><a href="#2-为什么选择-FreeRTOS" class="headerlink" title="2.为什么选择 FreeRTOS"></a>2.为什么选择 FreeRTOS</h2></li>
+<li>FreeRTOS 是 RTOS 系统的一种，FreeRTOS 十分的小巧，可以在资源有限的微控制器中运行，当然，FreeRTOS 不仅局限于在微控制器中使用。但从文件数量上来看 FreeRTOS 要比uC/OSII 和 uC/OSIII 小的多。</li>
+<li>功能包括：<br>-任务管理<br>-时间管理<br>-信号量<br>-消息队列<br>-内存管理<br>-记录功能<br>-软件定时器<br>-协程</li>
 </ol>
-<ul>
+<h2 id="2-为什么选择-FreeRTOS"><a href="#2-为什么选择-FreeRTOS" class="headerlink" title="2.为什么选择 FreeRTOS"></a>2.为什么选择 FreeRTOS</h2><ul>
 <li><p> RTOS 类系统有很多，比如 uC/OS，资料很多，尤其是中文资料，那为什么要选择 FreeRTOS 呢？</p>
 </li>
 <li><p> FreeRTOS是免费的，学习RTOS操作系统的话 uC/OS是首选，但要做产品的话，免费的FreeRTOS操作系统就是个不错的选择。</p>
@@ -193,37 +183,49 @@
 <li><p>许多半导体厂商产品的 SDK(Software Development Kit—软件开发工具包) 包就使用 FreeRTOS 作为其操作系统，尤其是 WIFI、蓝牙这些带协议栈的芯片或模块。</p>
 </li>
 <li><p>简单，因为FreeRTOS 的文件数量很少。</p>
-<h2 id="3-FreeRTOS-特点"><a href="#3-FreeRTOS-特点" class="headerlink" title="3.FreeRTOS 特点"></a>3.FreeRTOS 特点</h2><p>FreeRTOS 是一个可裁剪的小型 RTOS 系统，其特点包括：<br>FreeRTOS 的内核支持抢占式，合作式和时间片调度。</p>
 </li>
-<li><p>提供了一个用于低功耗的 Tickless 模式。</p>
-</li>
-<li><p>系统的组件在创建时可以选择动态或者静态的 RAM，比如任务、消息队列、信号量、软件定时器等等。</p>
-</li>
-<li><p>FreeRTOS-MPU 支持 Corex-M 系列中的 MPU 单元，如 STM32F429。</p>
-</li>
-<li><p>FreeRTOS 系统简单、小巧、易用，通常情况下内核占用 4k-9k 字节的空间。</p>
-</li>
-<li><p>高可移植性，代码主要 C 语言编写。</p>
-</li>
-<li><p>高效的软件定时器。</p>
-</li>
-<li><p>强大的跟踪执行功能。</p>
-</li>
-<li><p>堆栈溢出检测功能。</p>
-</li>
-<li><p>任务数量不限。</p>
-</li>
-<li><p>任务优先级不限。</p>
-<h1 id="FreeRTOS资料库"><a href="#FreeRTOS资料库" class="headerlink" title="FreeRTOS资料库"></a>FreeRTOS资料库</h1></li>
 </ul>
-<ol>
+<h1 id="3-FreeRTOS-特点"><a href="#3-FreeRTOS-特点" class="headerlink" title="3.FreeRTOS 特点"></a>3.FreeRTOS 特点</h1><p>FreeRTOS 是一个可裁剪的小型 RTOS 系统，其特点包括：<br>FreeRTOS 的内核支持抢占式，合作式和时间片调度。</p>
+<ul>
+<li>提供了一个用于低功耗的 Tickless 模式。</li>
+<li>系统的组件在创建时可以选择动态或者静态的 RAM，比如任务、消息队列、信号量、软件定时器等等。</li>
+<li>FreeRTOS-MPU 支持 Corex-M 系列中的 MPU 单元，如 STM32F429。</li>
+<li>FreeRTOS 系统简单、小巧、易用，通常情况下内核占用 4k-9k 字节的空间。</li>
+<li>高可移植性，代码主要 C 语言编写。</li>
+<li>高效的软件定时器。</li>
+<li>强大的跟踪执行功能。</li>
+<li>堆栈溢出检测功能。</li>
+<li>任务数量不限。</li>
+<li>任务优先级不限。</li>
+</ul>
+<h1 id="4-FreeRTOS资料库"><a href="#4-FreeRTOS资料库" class="headerlink" title="4.FreeRTOS资料库"></a>4.FreeRTOS资料库</h1><ol>
 <li><a href="www.freertos.org">FreeRTOS的官网</a></li>
-<li>系统定义的链表和链表节点数据结构如下所示：<br> //定义链表结构<br> typedef struct xLIST{<br>   unsigned portSHORPT usNumberOfItems;    //usNumberOfItems为链表的长度，为0表示链表为空<br>   volatile xListItem *pxHead;    //pxHead为链表的头指针<br>   volatile xListItem *pxIndex;    //pxIndex指向链表当前结点的指针<br>   volatile xListItem xListEnd;    //xListEnd为链表尾结点<br> }xList; //定义链表结点的结构<br> struct xLIST_ITEM{<br> port Tick type;    //port Type为时针节拍数据类型<br> xItem Value;    //xItem Value的值用于实现时间管理，可根据需要选择为16位或32位<br> volatile struct xLIST_ITEM *pxNext;    //指向链表的前一个结点<br> void *pvOwner;    //指向此链表结点所在的任务控制块<br> void *pvContainer;    //指向此链表结点所在的链表<br> }；<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><blockquote>
+<li>系统定义的链表和链表节点数据结构如下所示：<pre><code> //定义链表结构
+ typedef struct xLIST&#123;
+   unsigned portSHORPT usNumberOfItems;    //usNumberOfItems为链表的长度，为0表示链表为空
+   volatile xListItem *pxHead;    //pxHead为链表的头指针
+   volatile xListItem *pxIndex;    //pxIndex指向链表当前结点的指针
+   volatile xListItem xListEnd;    //xListEnd为链表尾结点
+ &#125;xList;
+
+ //定义链表结点的结构
+ struct xLIST_ITEM&#123;
+ port Tick type;    //port Type为时针节拍数据类型
+ xItem Value;    //xItem Value的值用于实现时间管理，可根据需要选择为16位或32位
+ volatile struct xLIST_ITEM *pxNext;    //指向链表的前一个结点
+ void *pvOwner;    //指向此链表结点所在的任务控制块
+ void *pvContainer;    //指向此链表结点所在的链表
+ &#125;；
+</code></pre>
+</li>
+</ol>
+<h1 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5.常见问题"></a>5.常见问题</h1><blockquote>
 <p>每当任务、队列和信号量创建的时候，FreeRTOS要求分配一定的RAM。虽然采用malloc()和free()函数可以实现申请和释放内存的功能，但这两个函数存在以下缺点：并不是在所有的嵌入式系统中都可用，要占用不定的程序空间，可重入性欠缺以及执行时间具有不可确定性。为此，除了可采用malloc()和free()函数外，FreeRTOS还提供了另外两种内存分配的策略，用户可以根据实际需要选择不同的内存分配策略。<br>解决方法有：</p>
 </blockquote>
-</li>
+<ol>
 <li>按照需求内存的大小简单地把一大块内存分割为若干小块，每个小块的大小对应于所需求内存的大小。这样做的好处是比较简单，执行时间可严格确定，适用于任务和队列全部创建完毕后再进行内核调度的系统；这样做的缺点是，由于内存不能有效释放，系统运行时应用程序并不能实现删除任务或队列。</li>
-<li>采用链表分配内存，可实现动态的创建、删除任务或队列。系统根据空闲内存块的大小按从小到大的顺序组织空闲内存链表。当应用程序申请一块内存时，系统根据申请内存的大小按顺序搜索空闲内存链表，找到满足申请内存要求的最小空闲内存块。为了提高内存的使用效率，在空闲内存块比申请内存大的情况下，系统会把此空闲内存块一分为二。一块用于满足申请内存的要求，一块作为新的空闲内存块插入到链表中。<br>FreeRTOS中每个任务对应于一个任务控制块（TCB），其定义如下所示：<br> typedef struct tasTaskContralBlock{<pre><code> portSTACK_TYPE *pxTopOfStack;    //指向任务堆栈结束处
+<li>采用链表分配内存，可实现动态的创建、删除任务或队列。系统根据空闲内存块的大小按从小到大的顺序组织空闲内存链表。当应用程序申请一块内存时，系统根据申请内存的大小按顺序搜索空闲内存链表，找到满足申请内存要求的最小空闲内存块。为了提高内存的使用效率，在空闲内存块比申请内存大的情况下，系统会把此空闲内存块一分为二。一块用于满足申请内存的要求，一块作为新的空闲内存块插入到链表中。<br>FreeRTOS中每个任务对应于一个任务控制块（TCB），其定义如下所示：<pre><code> typedef struct tasTaskContralBlock&#123;
+ portSTACK_TYPE *pxTopOfStack;    //指向任务堆栈结束处
  portSTACK_TYPE *pxStack;    //指向任务堆栈起始处
  unsigned portSHORT usStackDepth;    //定义堆栈深度
  signed portCHAR pcTaskName[tskMAX_TASK_NAME_LEN];    //任务名称
@@ -231,9 +233,11 @@
  xListItem xGenericListItem;    //用于把TCB插入就绪表或等待链表
  xListItem xEventListItem;    //用于把TCB插入事件链表（如消息队列）
  unsigned portCHAR ucTCBNumber;    //用于记录功能
+ &#125;tskTCB;
 </code></pre>
- }tskTCB;<br>作为一个轻量级的操作系统，FreeRTOS提供的功能包括：任务管理、时间管理、信号量、消息队列、内存管理、记录功能等，可基本满足较小系统的需要。FreeRTOS内核支持优先级调度算法，每个任务可根据重要程度的不同被赋予一定的优先级，CPU总是让处于就绪态的、优先级最高的任务先运行。FreeRTOS内核同时支持轮换调度算法，系统允许不同的任务使用相同的优先级，在没有更高优先级任务就绪的情况下，同一优先级的任务共享CPU的使用时间。FreeRTOS的内核可根据用户需要设置为可剥夺型内核或不可剥夺型内核。当FreeRTOS被设置为可剥夺型内核时，处于就绪态的高优先级任务能剥夺低优先级任务的CPU使用权，这样可保证系统满足实时性的要求；当FreeRTOS被设置为不可剥夺型内核时，处于就绪态的高优先级任务只有等当前运行任务主动释放CPU的使用权后才能获得运行，这样可提高CPU的运行效率。</li>
+</li>
 </ol>
+<p>作为一个轻量级的操作系统，FreeRTOS提供的功能包括：任务管理、时间管理、信号量、消息队列、内存管理、记录功能等，可基本满足较小系统的需要。FreeRTOS内核支持优先级调度算法，每个任务可根据重要程度的不同被赋予一定的优先级，CPU总是让处于就绪态的、优先级最高的任务先运行。FreeRTOS内核同时支持轮换调度算法，系统允许不同的任务使用相同的优先级，在没有更高优先级任务就绪的情况下，同一优先级的任务共享CPU的使用时间。FreeRTOS的内核可根据用户需要设置为可剥夺型内核或不可剥夺型内核。当FreeRTOS被设置为可剥夺型内核时，处于就绪态的高优先级任务能剥夺低优先级任务的CPU使用权，这样可保证系统满足实时性的要求；当FreeRTOS被设置为不可剥夺型内核时，处于就绪态的高优先级任务只有等当前运行任务主动释放CPU的使用权后才能获得运行，这样可提高CPU的运行效率。</p>
  
       <!-- reward -->
       
